@@ -11,12 +11,12 @@ type Props = {
 };
 
 const WithStaticProps = ({ items }: Props) => (
-  <Layout title="Blog">
+  <Layout title="Forums">
     <h1>Users List</h1>
     <p>
       Example fetching data from inside <code>getStaticProps()</code>.
     </p>
-    <p>You are currently on: /users</p>
+    <p>You are currently on: /forums</p>
     <List items={items} />
     <p>
       <Link href="/">Go home</Link>
