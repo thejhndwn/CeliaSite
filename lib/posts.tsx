@@ -17,7 +17,7 @@ export function getPosts(): Post[] {
       const htmlContent = marked.parse(body);
 
       acc.push({
-        id: attributes.date + ': ' + attributes.title.replace(/\s/g, '-'),
+        id: attributes.date + '-' + attributes.title.replace(/\s/g, '-'),
         title: attributes.title,
         author: attributes.author,
         date: attributes.date,

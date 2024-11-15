@@ -1,12 +1,12 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 
-import { User } from "../../interfaces";
-import { sampleUserData } from "../../utils/sample-data";
+import { Post } from "../../interfaces";
 import Layout from "../../components/Layout";
 import ListDetail from "../../components/ListDetail";
+import { getPosts } from "../../lib/posts";
 
 type Props = {
-  item?: User;
+  item?: Post;
   errors?: string;
 };
 
@@ -24,7 +24,7 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
   return (
     <Layout
       title={`${
-        item ? item.name : "User Detail"
+        item ? item.title : "User Detail"
       } | Next.js + TypeScript Example`}
     >
       {item && <ListDetail item={item} />}
@@ -36,9 +36,15 @@ export default StaticPropsDetail;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Get the paths we want to pre-render based on users
-  const paths = sampleUserData.map((user) => ({
-    params: { id: user.id.toString() },
-  }));
+  const paths = getPosts().map((post) => {
+    console.log('Processing post:', post);
+    console.log('Post ID:', post.id.toString());
+  
+    return {
+      params: { id: post.id.toString() },
+    };
+  });
+  
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
@@ -50,10 +56,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // direct database queries.
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
+    console.log("BIG FLAG LOVER")
     const id = params?.id;
-    const item = sampleUserData.find((data) => data.id === Number(id));
+    console.log("BIG FLAG LOVER DONE")
+    const item = getPosts().find((data) => data.id === id);
     // By returning { props: item }, the StaticPropsDetail component
     // will receive `item` as a prop at build time
+    console.log("FLAG")
+    console.log(getPosts())
+    console.log(id)
+    console.log(item)
+    console.log("FLAGGGG")
     return { props: { item } };
   } catch (err: any) {
     return { props: { errors: err.message } };

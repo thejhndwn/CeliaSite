@@ -9,7 +9,7 @@ type Props = {
 
 const PostListItem = ({ data }: Props) => (
   <Link href="/blog/[id]" as={`/blog/${data.id}`}>
-    {data.id}:{data.name}
+    {data.date}: {data.title}
   </Link>
 );
 
