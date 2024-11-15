@@ -7,10 +7,10 @@ type Props = {
   data: User;
 };
 
-const ListItem = ({ data }: Props) => (
-  <Link href="/users/[id]" as={`/users/${data.id}`}>
+const PostListItem = ({ data }: Props) => (
+  <Link href="/blog/[id]" as={`/blog/${data.id}`}>
     {data.id}:{data.name}
   </Link>
 );
 
-export default ListItem;
+export default PostListItem;

@@ -1,12 +1,12 @@
 import * as React from "react";
-import ListItem from "./ListItem";
+import ListItem from "./PostListItem";
 import { User } from "../interfaces";
 
 type Props = {
   items: User[];
 };
 
-const List = ({ items }: Props) => (
+const PostList = ({ items }: Props) => (
   <ul>
     {items.map((item) => (
       <li key={item.id}>
@@ -16,4 +16,4 @@ const List = ({ items }: Props) => (
   </ul>
 );
 
-export default List;
+export default PostList;
