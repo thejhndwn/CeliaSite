@@ -21,6 +21,7 @@ export function getPosts(): Post[] {
         title: attributes.title,
         author: attributes.author,
         date: attributes.date,
+        subtext: attributes.subtext,
         content: htmlContent,
       });
     }

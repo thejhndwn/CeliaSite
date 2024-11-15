@@ -15,5 +15,5 @@ export type Post = {
   date: string;
   author: string;
   content: string;
-
+  subtext: string;
 }
