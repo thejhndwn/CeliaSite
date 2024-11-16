@@ -17,3 +17,23 @@ export type Post = {
   content: string;
   subtext: string;
 }
+
+export type Forum = {
+  id: number;
+  title: string;
+  date: string;
+  likes: number;
+  dislikes: number;
+  messages: []
+}
+
+export type ForumMessage = {
+  id: number;
+  title: string;
+  date: string;
+  timestamp: string;
+  author: string;
+  content: string;
+  likes: number;
+  dislikes: number;
+}
