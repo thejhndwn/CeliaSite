@@ -13,7 +13,7 @@ import List from "../../components/PostList";
 import { getPosts } from "../../lib/posts";
 
 type Props = {
-  items: User[];
+  items: Post[];
 };
 
 const WithStaticProps = ({ items }: Props) => (

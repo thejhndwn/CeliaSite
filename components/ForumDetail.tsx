@@ -1,15 +1,19 @@
 import * as React from "react";
 import parse from "html-react-parser";
 
-import { Post } from "../interfaces";
+import { Forum, Post } from "../interfaces";
+import ForumMessage from "./ForumMessage";
 
 type ForumListDetailProps = {
-  item: Post;
+  item: Forum;
 };
 
-const ForumListDetail = ({ item: post }: ForumListDetailProps) => (
+const ForumListDetail = ({ item: forum }: ForumListDetailProps) => (
   <div>
-    <h1> {post.title}</h1>
+    <h1> {forum.title}</h1>
+    {forum.messages.map((message) => (
+        <ForumMessage data={message}/>
+    ))}
   </div>
 );
 

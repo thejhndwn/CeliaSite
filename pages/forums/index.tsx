@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { Forum } from "../../interfaces";
 import Layout from "../../components/Layout";
-import List from "../../components/PostList";
+import List from "../../components/ForumList";
 import { getForums } from "../../lib/forums";
 
 type Props = {
@@ -12,11 +12,8 @@ type Props = {
 
 const WithStaticProps = ({ items }: Props) => (
   <Layout title="Forums">
-    <h1>Users List</h1>
-    <p>
-      Example fetching data from inside <code>getStaticProps()</code>.
-    </p>
-    <p>You are currently on: /forums</p>
+    <h1>Forums</h1>
+    <p>Find forums below</p>
     <List items={items} />
     <p>
       <Link href="/">Go home</Link>

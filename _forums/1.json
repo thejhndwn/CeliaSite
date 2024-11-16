@@ -4,6 +4,8 @@
     "id": 1,
     "title": "HelloWorld",
     "date": "2022-01-01",
+    "likes": 1,
+    "dislikes": 0,
     "messages": [
       {
         "id": 1,

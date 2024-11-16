@@ -24,7 +24,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
     {children}
     <footer>
       <hr />
-      <span>Made by <a href="https://twitter.com/ifneedtechhelp">@ifnneedtechhelp</a> with love</span>
+      <span>Made by <a href="https://twitter.com/ifnneedtechhelp">@ifnneedtechhelp</a> with love</span>
     </footer>
   </div>
 );
