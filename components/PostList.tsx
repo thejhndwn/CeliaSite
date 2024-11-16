@@ -1,9 +1,9 @@
 import * as React from "react";
 import ListItem from "./PostListItem";
-import { User } from "../interfaces";
+import { Post, User } from "../interfaces";
 
 type Props = {
-  items: User[];
+  items: Post[];
 };
 
 const PostList = ({ items }: Props) => (

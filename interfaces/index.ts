@@ -24,7 +24,7 @@ export type Forum = {
   date: string;
   likes: number;
   dislikes: number;
-  messages: []
+  messages: ForumMessage[]
 }
 
 export type ForumMessage = {
