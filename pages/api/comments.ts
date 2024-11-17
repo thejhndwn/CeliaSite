@@ -1,8 +1,10 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { sampleUserData } from "../../../utils/sample-data";
+import { sampleUserData } from "../../utils/sample-data";
+import { addMessage } from "../../lib/forums";
 
-const handler = (_req: NextApiRequest, res: NextApiResponse) => {
+const handler = (req: NextApiRequest, res: NextApiResponse) => {
     console.log("we made itttt")
+    console.log(req)
 
 
   try {
@@ -11,8 +13,12 @@ const handler = (_req: NextApiRequest, res: NextApiResponse) => {
     }
     console.log("we made it")
 
-    res.status(200).json(sampleUserData);
+    addMessage(req.body.forumId, req.body.name, req.body.message);
+    console.log("we made it 2")
+
+    res.status(200);
   } catch (err: any) {
+    console.log("I don't understand")
     res.status(500).json({ statusCode: 500, message: err.message });
   }
 };

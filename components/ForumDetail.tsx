@@ -15,7 +15,7 @@ const ForumListDetail = ({ item: forum }: ForumListDetailProps) => (
     {forum.messages.map((message) => (
         <ForumMessage data={message}/>
     ))}
-    <ForumCommenter/>
+    <ForumCommenter id={forum.id.toString()}/>
   </div>
 );
 

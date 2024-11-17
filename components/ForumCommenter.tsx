@@ -4,24 +4,26 @@ import parse from "html-react-parser";
 import { Forum, Post } from "../interfaces";
 import ForumMessage from "./ForumMessage";
 
-type ForumListDetailProps = {
-  item: Forum;
+type ForumCommenterProps = {
+  id: string;
 };
 
-export default function ForumCommenter() {
+export default function ForumCommenter({id} : ForumCommenterProps) {
     const handleSubmit = async (e) => {
 
         console.log("here are the other things")
         e.preventDefault();
 
         console.log("here are the things")
+        console.log(new FormData(e.target))
+        console.log(e.toString());
 
         await fetch('/api/comments', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: new FormData(e.target)
+            body: JSON.stringify({name: e.target.name.value, message: e.target.message.value, forumId: id}),
 
         });
 

@@ -29,8 +29,6 @@ export type Forum = {
 
 export type ForumMessage = {
   id: number;
-  title: string;
-  date: string;
   timestamp: string;
   author: string;
   content: string;

@@ -1,6 +1,6 @@
 import path from "path";
 import fs from 'fs';
-import { Forum } from "../interfaces";
+import { Forum, ForumMessage } from "../interfaces";
 
 export function getForums(): Forum[] {
   const postsDirectory = path.join(process.cwd(), '_forums');
@@ -26,4 +26,41 @@ export function getForums(): Forum[] {
   }, [] as Forum[]);
 
   return forum;
+}
+
+export function addMessage(forumId: string, name: string, message: string) {
+  console.log("entered addMessage")
+  const forumPath = path.join(process.cwd(), '_forums', forumId + '.json ');
+
+  console.log(forumPath)
+  console.log(fs.readdirSync(path.join(process.cwd(), '_forums')))
+  const jsonData = fs.readFileSync(forumPath, 'utf8');
+
+  console.log("water ")
+
+  const forum: Forum = JSON.parse(jsonData);
+  console.log("water buffalo")
+  const newMessage: ForumMessage = {
+    id: forum.messages.length,
+    timestamp: new Date().toISOString(),
+    author: name,
+    content: message,
+    likes: 0,
+    dislikes: 0,
+  }
+
+  console.log("water buffalo 1")
+
+  forum.messages.push(newMessage);
+
+  console.log("water buffalo 2")
+
+  fs.writeFile('output.json', jsonData, (err) => {
+    if (err) {
+      console.log("bender")
+      console.error(err);
+    } else {
+      console.log('JSON file written successfully');
+    }
+  });
 }
