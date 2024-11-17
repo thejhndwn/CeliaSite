@@ -3,6 +3,7 @@ import parse from "html-react-parser";
 
 import { Forum, Post } from "../interfaces";
 import ForumMessage from "./ForumMessage";
+import ForumCommenter from "./ForumCommenter";
 
 type ForumListDetailProps = {
   item: Forum;
@@ -14,6 +15,7 @@ const ForumListDetail = ({ item: forum }: ForumListDetailProps) => (
     {forum.messages.map((message) => (
         <ForumMessage data={message}/>
     ))}
+    <ForumCommenter/>
   </div>
 );
 
