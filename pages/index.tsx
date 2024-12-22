@@ -3,19 +3,17 @@ import Layout from "../components/Layout";
 
 const IndexPage = () => (
   <Layout title="Home">
-    <h1>Welcome to Loki's Palace</h1>
+    <h1>Welcome to lokispalace.com the current home of Celia Intelligence Anemone</h1>
     <p>
-      This is the premier place on the internet for memory sports enthusiasts. <br></br>
-      This site is for seasoned World Memory Champions, complete beginners, 
-      or if you're just looking to improve your memory.
+      CIA is founded to further AI powered 3D generation. We do this by researching... efficient generation methods in architecture, hardware, graphics representation and capture, and AI methodology. 
     </p>
     <p>
-      Here's a rough guide to get you started
+      Site directory to get you started
       <ul>
-        <li><Link href="/about">About</Link> is where  you can find resources on memory competitions, memory improvement technniques, and a history of memory sports </li>
-        <li><Link href="/users">Games</Link> is where our interactive memory games are located. These are inspired by real memory tasks you would find at memory competitions</li>
-        <li><Link href="/forums">Forums</Link> is where you can talk to other memory enthusiasts and share your best scores or memory technniques or talk about new compeititons or request new features</li>
-        <li><Link href="/blog">Blog</Link> is where you can find posts written by our users about all-things memory or whatever I find interesting. Similar to the forums but more polished and curated</li>
+        <li><Link href="/about">Work board</Link> Find out about our ongoign and preiovus work </li>
+        <li><Link href="/users">Team</Link> Learn about our team or contact us </li>
+        <li><Link href="/forums">Forums</Link> Find ongoing discourse. Come learn and be a student. Contribute and be a hero!</li>
+        <li><Link href="/blog">Blog</Link> Find posts written by our verified contributors to learn about ongoing developments in the scene</li>
       </ul>
       
     </p>
