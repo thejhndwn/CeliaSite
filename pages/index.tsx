@@ -1,6 +1,11 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
 
+// Work board -  should contain post like objects with links, visible should be abstracts on the projects, main contributor/lead/contact, and customizable should be photo and background. 
+// Team - contains simple objects that contain picture, personal title, and previous experience, or quote/excerpt
+// Forums - contains forum like objects,
+// Blog - contains blog like objects. 
+
 const IndexPage = () => (
   <Layout title="Home">
     <h1>Welcome to lokispalace.com the current home of Celia Intelligence Anemone</h1>
