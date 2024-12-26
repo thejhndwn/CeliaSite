@@ -1,1 +1,8 @@
-// update 
+- figure out deployment and routing
+- make first post
+- update /blog landing page to be more informational with contributor and tags and abstract
+
+
+- add site path tree
+- add personal member pages
+- update the team members social media conditional
