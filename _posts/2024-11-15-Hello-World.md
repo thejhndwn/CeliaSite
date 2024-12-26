@@ -1,6 +1,6 @@
 ---
 title: Hello World!
-author: thj
+author: Lil Jon
 date: 11-15-2024
 subtext: The ultimate test
 ---

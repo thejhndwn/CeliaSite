@@ -5,9 +5,10 @@ import Head from "next/head";
 type Props = {
   children?: ReactNode;
   title?: string;
+  footer?: ReactNode;
 };
 
-const Layout = ({ children, title = "This is the default title" }: Props) => (
+const Layout = ({ children, title = "This is the default title", footer = "BIGFOOTER" }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -25,7 +26,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
     {children}
     <footer>
       <hr />
-      <span>Made by <a href="https://twitter.com/ifnneedtechhelp">@ifnneedtechhelp</a> with love</span>
+      {footer}
     </footer>
   </div>
 );
