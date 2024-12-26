@@ -46,3 +46,18 @@ export type Project = {
   projectId: string;
   content: string;
 }
+
+
+export type TeamMember = {
+  name: string;
+  links?: Links,
+  picture?: string;
+  title: string;
+  previous?: string;
+}
+
+export type Links = {
+  github?: string;
+  twitter?: string;
+  website?: string;
+}
