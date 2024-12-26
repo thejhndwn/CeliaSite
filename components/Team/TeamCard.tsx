@@ -3,15 +3,7 @@ import Link from "next/link";
 
 import { Project, TeamMember } from "../../interfaces";
 
-/* <Link href="/workboard/[id]" as={`/workboard/${data.projectId}`}>
-{data.title}
-</Link>
-<i> {data.details} | {data.status}</i>
-<p>Contributors: {
-    [...data.contributors] 
-      .sort(() => Math.random() - 0.5) 
-      .join(', ') 
-  }  | Maintainer: {data.maintainer} </p> */
+//TODO: Fix the Socials/Links conditional
 
 type Props = {
   data: TeamMember;
@@ -19,8 +11,14 @@ type Props = {
 
 const TeamCard = ({ data }: Props) => (
   <div>
-    {data.name}
-    {data.title}
+    <h3>{data.name}</h3>
+    <img src={`/profiles/${data.picture}`} alt="Profile Picture" width="150" height="150"/> 
+    <br></br>
+    <i>{data.title}</i>
+    <br></br>
+    <i>{data.previous}</i>
+    <br></br>
+    <i>Twitter: {data.links.twitter}</i>
   </div>
 );
 

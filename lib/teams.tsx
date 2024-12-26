@@ -10,13 +10,13 @@ export function getTeam(): TeamMember[] {
       name: member.name, 
       links: member.links 
         ? { 
-            twitter: member.links.twitter || undefined, 
-            github: member.links.github || undefined, 
-            website: member.links.website || undefined 
+            twitter: member.links.twitter || null, 
+            github: member.links.github || null, 
+            website: member.links.website || null 
           } 
-        : undefined,
-      picture: member.picture || undefined,
-      title: member.title || undefined,
-      previous: member.previous || undefined,
+        : null,
+      picture: member.picture || null,
+      title: member.title || null,
+      previous: member.previous || null,
     }));
   }

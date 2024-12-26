@@ -17,10 +17,9 @@ const Layout = ({ children, title = "In-Titled", footer = "BIGFOOTER" }: Props) 
     </Head>
     <header>
       <nav>
-        <Link href="/">Home</Link> | <Link href="/workboard">Work Board</Link> |{" "}
+        <Link href="/">Home</Link> | <Link href="/workboard">WorkBoard</Link> |{" "}
         <Link href="/team">Team</Link> |{" "}
-        <Link href="/forums">Forums</Link> |{" "}
-        <Link href="/blog">Blog</Link> |{" "}
+        <Link href="/blog">Blog</Link>
       </nav>
     </header>
     {children}

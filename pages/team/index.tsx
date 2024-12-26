@@ -13,7 +13,7 @@ type Props = {
 };
 
 const WithStaticProps = ({ items }: Props) => (
-  <Layout title="Blog">
+  <Layout title="Celia | Team" footer="We're from the guild that doesn't know when to stop! We won't survive unless we keep running! - Hiro Mashima (Fairy Tail)">
     <Team items={items}></Team>
   </Layout>
 );
@@ -23,7 +23,6 @@ export const getStaticProps: GetStaticProps = async () => {
   // Don't forget to include the respective types for any props passed into
   // the component.
   const items: TeamMember[] = getTeam();
-  console.log(items);
   return { props: { items } };
 };
 

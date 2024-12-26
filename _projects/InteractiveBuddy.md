@@ -3,7 +3,7 @@ projectId: 3DBUDDY
 title: 3D Interactive Buddy
 details: ThreeJS port of the Interactive Buddy flash game
 maintainer: Lil Jon
-contributors: [Lil Jon, JJ]
+contributors: [Lil Jon]
 status: Releasing 1/11
 quote: "'Miniclip changed my life. Just that one website alone, I could spend the entire day on. 8 ball pool, Gravity Guy, Fireboy & Watergirl, and Free Running. I will never forget you' -@stqrace, X.com"
 
