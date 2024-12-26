@@ -16,8 +16,8 @@ const IndexPage = () => (
     <p>
       Site directory to get you started
       <ul>
-        <li><Link href="/about">Work Board</Link> Public ongoing and released work </li>
-        <li><Link href="/users">Team</Link> Beware, pirates! </li>
+        <li><Link href="/workboard">Work Board</Link> Public ongoing and released work </li>
+        <li><Link href="/team">Team</Link> Beware, pirates! </li>
         <li><Link href="/forums">Forums</Link> PvP thought arena. Be a student and learn. Contribute and be a hero!</li>
         <li><Link href="/blog">Blog</Link> Posts about important developments in the scene</li>
       </ul>

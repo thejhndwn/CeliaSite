@@ -1,5 +1,9 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
+import matter from  "front-matter";
+import marked from "marked";
+import path from "path";
+import { promises as fs } from 'fs';
 
 
 import { Post, User } from "../../interfaces";
@@ -16,6 +20,9 @@ const WithStaticProps = ({ items }: Props) => (
   <Layout title="Blog">
     <h1>Latest Posts</h1>
     <List items={items} />
+    <p>
+      <Link href="/">Go home</Link>
+    </p>
   </Layout>
 );
 

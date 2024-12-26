@@ -8,7 +8,7 @@ type Props = {
   footer?: ReactNode;
 };
 
-const Layout = ({ children, title = "This is the default title", footer = "BIGFOOTER" }: Props) => (
+const Layout = ({ children, title = "In-Titled", footer = "BIGFOOTER" }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -17,16 +17,16 @@ const Layout = ({ children, title = "This is the default title", footer = "BIGFO
     </Head>
     <header>
       <nav>
-        <Link href="/">Home</Link> | <Link href="/about">About</Link> |{" "}
-        <Link href="/blog">Blog</Link> |{" "}
+        <Link href="/">Home</Link> | <Link href="/workboard">Work Board</Link> |{" "}
+        <Link href="/team">Team</Link> |{" "}
         <Link href="/forums">Forums</Link> |{" "}
-        <Link href="/games">Games</Link> |{" "}
+        <Link href="/blog">Blog</Link> |{" "}
       </nav>
     </header>
     {children}
     <footer>
       <hr />
-      {footer}
+      <i>{footer}</i>
     </footer>
   </div>
 );

@@ -1,12 +1,12 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 
-import { Post } from "../../interfaces";
+import { Project } from "../../interfaces";
 import Layout from "../../components/Layout";
-import ListDetail from "../../components/ListDetail";
-import { getPosts } from "../../lib/posts";
+import { getProjects } from "../../lib/projects";
+import ProjectDetail from "../../components/WorkBoard/ProjectDetail";
 
 type Props = {
-  item?: Post;
+  item?: Project;
   errors?: string;
 };
 
@@ -23,11 +23,12 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
 
   return (
     <Layout
-      title={`${
-        item ? item.title : "User Detail"
-      } | Next.js + TypeScript Example`}
+      title={`PROJECT${
+        item ? item.projectId : "User Detail"
+      } ` }
+      footer={` ${item.quote} `}
     >
-      {item && <ListDetail item={item} />}
+      {item && <ProjectDetail item={item} />}
     </Layout>
   );
 };
@@ -36,12 +37,11 @@ export default StaticPropsDetail;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Get the paths we want to pre-render based on users
-  const paths = getPosts().map((post) => {
-    console.log('Processing post:', post);
-    console.log('Post ID:', post.id.toString());
+  const paths = getProjects().map((project) => {
+
   
     return {
-      params: { id: post.id.toString() },
+      params: { id: project.projectId },
     };
   });
   
@@ -57,7 +57,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const id = params?.id;
-    const item = getPosts().find((data) => data.id === id);
+    const item = getProjects().find((data) => data.projectId === id);
+
     return { props: { item } };
   } catch (err: any) {
     return { props: { errors: err.message } };

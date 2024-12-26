@@ -35,3 +35,14 @@ export type ForumMessage = {
   likes: number;
   dislikes: number;
 }
+
+export type Project = {
+  title: string;
+  details: string;
+  contributors: string[];
+  maintainer: string;
+  status: string;
+  quote: string;
+  projectId: string;
+  content: string;
+}
