@@ -1,37 +1,49 @@
-import path from "path";
-import fs from 'fs';
-import matter from "front-matter";
-import {marked} from "marked";
-import { Post } from "../interfaces";
-
-interface BlogFrontMatterAttributes {
-  id: string;
-}
+import path from 'path';
+import { promises as fs } from 'fs'; 
+import matter from 'front-matter'; 
+import { marked } from 'marked'; 
+import { Post } from '../interfaces'; 
 
 
-export function getPosts(): Post[] {
+export async function getPosts(): Promise<Post[]> {
   const postsDirectory = path.join(process.cwd(), '_posts');
-  const fileNames = fs.readdirSync(postsDirectory);
 
-  const posts: Post[] = fileNames.reduce((acc, fileName) => {
-    if (path.extname(fileName) === '.md') {
-      const filePath = path.join(postsDirectory, fileName);
-      const markdown = fs.readFileSync(filePath, 'utf8');
-      const { attributes, body } = matter<Post>(markdown);
-      
-      const htmlContent = marked.parse(body);
+  try {
+    const fileNames = await fs.readdir(postsDirectory); 
 
-      acc.push({
-        id: attributes.date + '-' + attributes.title.replace(/\s/g, '-'),
-        title: attributes.title,
-        author: attributes.author,
-        date: attributes.date,
-        subtext: attributes.subtext,
-        content: htmlContent,
-      });
-    }
-    return acc;
-  }, [] as Post[]);
+    const posts: Post[] = await Promise.all(
+      fileNames.map(async (fileName) => {
+        if (path.extname(fileName) === '.md') {
+          const filePath = path.join(postsDirectory, fileName);
+          const fileContent = await fs.readFile(filePath, 'utf8'); 
+          const result = matter<Post>(fileContent); 
+          const attributes = result.attributes;
+          const content = result.body;
 
-  return posts;
+          if (!attributes.id) {
+            console.warn(`Error: Missing required attribute 'id' in ${fileName}`);
+            return null; 
+          }
+
+          const htmlContent = await marked.parse(content);
+
+          return {
+            id: attributes.id, 
+            title: attributes.title,
+            author: attributes.author,
+            date: attributes.date,
+            subtext: attributes.subtext,
+            content: htmlContent,
+          } as Post;
+        }
+
+        return null; 
+      })
+    );
+
+    return posts.filter(Boolean) as Post[]; // Filter out null values    return filteredPosts;
+  } catch (error) {
+    console.error('Error reading or processing posts:', error);
+    return []; // Handle errors gracefully
+  }
 }
