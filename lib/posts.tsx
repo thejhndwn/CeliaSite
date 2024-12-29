@@ -20,15 +20,10 @@ export async function getPosts(): Promise<Post[]> {
           const attributes = result.attributes;
           const content = result.body;
 
-          if (!attributes.id) {
-            console.warn(`Error: Missing required attribute 'id' in ${fileName}`);
-            return null; 
-          }
-
           const htmlContent = await marked.parse(content);
 
           return {
-            id: attributes.id, 
+            id: `${attributes.date.replace(/\s/g, '-')}-${attributes.title.replace(/\s/g, '-')}`, 
             title: attributes.title,
             author: attributes.author,
             date: attributes.date,

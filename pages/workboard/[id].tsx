@@ -37,7 +37,8 @@ export default StaticPropsDetail;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Get the paths we want to pre-render based on users
-  const paths = getProjects().map((project) => {
+  const projects = await getProjects();
+  const paths = projects.map((project) => {
 
   
     return {
@@ -57,7 +58,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const id = params?.id;
-    const item = getProjects().find((data) => data.projectId === id);
+    const items = await getProjects();
+    const item = items.find((data) => data.projectId === id);
 
     return { props: { item } };
   } catch (err: any) {
