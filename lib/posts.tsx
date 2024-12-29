@@ -4,6 +4,11 @@ import matter from "front-matter";
 import {marked} from "marked";
 import { Post } from "../interfaces";
 
+interface BlogFrontMatterAttributes {
+  id: string;
+}
+
+
 export function getPosts(): Post[] {
   const postsDirectory = path.join(process.cwd(), '_posts');
   const fileNames = fs.readdirSync(postsDirectory);
@@ -12,7 +17,7 @@ export function getPosts(): Post[] {
     if (path.extname(fileName) === '.md') {
       const filePath = path.join(postsDirectory, fileName);
       const markdown = fs.readFileSync(filePath, 'utf8');
-      const { attributes, body } = matter(markdown);
+      const { attributes, body } = matter<Post>(markdown);
       
       const htmlContent = marked.parse(body);
 
