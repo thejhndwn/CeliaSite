@@ -1,4 +1,3 @@
 module.exports = {
-	distDir: 'build',
-	output: 'output',
+	output: 'export',
 };
