@@ -35,5 +35,8 @@ No CD, only plans
 - add bettermotherfuckingwebsite.com or perfectmotherfuckingwebsite.com styling
 - add custom team member pages
 - add custom team member links
+- add /blog landing page to be more informational to blog (contributor, tags, abstract)
 - comments for project pages?
 - add scripts for adding subdomains
+
+- add site directory tree
