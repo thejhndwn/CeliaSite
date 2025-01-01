@@ -38,6 +38,7 @@ No CD, only plans
 - add /blog landing page to be more informational to blog (contributor, tags, abstract)
 - comments for project pages?
 - add scripts for adding subdomains
-
+- add table of contents when relevant
+- add latest update view on /workboard landing page
 - add site directory tree
 
