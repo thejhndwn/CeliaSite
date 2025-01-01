@@ -27,7 +27,7 @@ We hope this project brings people to interact with our site and learn about who
 
 
 ### timeline
-- [ ] 12/28 figure out ball and joint issue
+- [ X ] 12/28 figure out ball and joint issue
 - [ ] 12/30 get physical avatar
 - [ ] 1/2 add first weapon
 - [ ] 1/4 release beta
@@ -38,4 +38,13 @@ We hope this project brings people to interact with our site and learn about who
 - [ ] 1/11 release
 
 ### updates
+#### 1/1 2:59AM
+We were having trouble making the sphere and ball in the buddy avatar. Turns out it was due to translating the rigidBody after adding it to the world...you should create the bodyDesc with the translation, then add to the world. I believe Rapier is not happy with the teleportation physics.
 
+So now we have two spheres which are connected by some magical joint. Today will be spent creating the class for the buddy avatar, and looking for some simple 3D model for a weapon that I can use for the missile.
+
+That introduces the problem on what we should make for the other weapons. Luckily there aren't an infinite amount of them, but each would require their coding and I'm not that motivated to even make 30 of them. 
+
+At some point we will have to add new skins and custom skins. 
+
+The good news is that we should be able to make something fairly working for the beta release this weekend. The bad news is that I doubt I'll be able to release the beta on Saturday, with making the subdomain and running my first 3D site.
