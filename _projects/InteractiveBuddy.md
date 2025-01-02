@@ -48,3 +48,19 @@ That introduces the problem on what we should make for the other weapons. Luckil
 At some point we will have to add new skins and custom skins. 
 
 The good news is that we should be able to make something fairly working for the beta release this weekend. The bad news is that I doubt I'll be able to release the beta on Saturday, with making the subdomain and running my first 3D site.
+
+#### 1/2 5:48PM
+Today we were able to add the first model for a weapon, albeit without the surrounding colliders. The joints are also nearly done, but there's an issue with the placement of the joints and it's not clear why. 
+
+```
+let paramsRightArm = RAPIER.JointData.spherical(
+    { x: 0, y: 0, z: 0 },
+    { x: 0, y: 0, z: 0 });
+  let jointRightArm = world.createImpulseJoint(params, ball.rigid, rightArm.rigid, true);
+
+```
+This is how we create our joints and the `Params` object should explain the joint placement relative to the entity body. However changing these values is having no effect on the joint placement. Also, switching the entity in the `createImpulseJoint` *does* have an effect on the joint - the declaration of entities for the joint is not commutative. ARGH! 
+
+But we can fix the joint problem another time, right now we have a (disabled) avatar and we can move on to making the rest of program work. Particularly, we need to move onto weapons: making the weapons colliders, creating the collider-money connection, and creating controls for the weapons. If we can get those three mostly working, and add avatar skins functionality I'd be happy releasing to the public this Saturday. It seems tomorrow will largely be spent figuring out the "money-maker", collisions, for the game. If we can figure this out the end will be in sight.
+
+It's hard to imagine that this game will be in any form complete in a week. I can think of so many things to add. But our next project is much more exciting.
