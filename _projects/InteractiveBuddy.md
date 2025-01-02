@@ -29,7 +29,7 @@ We hope this project brings people to interact with our site and learn about who
 ### timeline
 - [ X ] 12/28 figure out ball and joint issue
 - [ ] 12/30 get physical avatar
-- [ ] 1/2 add first weapon
+- [ ] 1/2 add first weapon model
 - [ ] 1/4 release beta
 - [ ] 1/5 add collisions and money system
 - [ ] 1/7 integrate money with tweakpane and collisions
