@@ -64,3 +64,11 @@ This is how we create our joints and the `Params` object should explain the join
 But we can fix the joint problem another time, right now we have a (disabled) avatar and we can move on to making the rest of program work. Particularly, we need to move onto weapons: making the weapons colliders, creating the collider-money connection, and creating controls for the weapons. If we can get those three mostly working, and add avatar skins functionality I'd be happy releasing to the public this Saturday. It seems tomorrow will largely be spent figuring out the "money-maker", collisions, for the game. If we can figure this out the end will be in sight.
 
 It's hard to imagine that this game will be in any form complete in a week. I can think of so many things to add. But our next project is much more exciting.
+
+#### 1/3 7:54PM
+
+Come see our "beta" at [buddy.lokispalace.com](buddy.lokispalace.com)!!! I'm hesitant to call it a beta since there's practically nothing there - no semblence of a game. I mean there's so much that needs to be done for it, but now we don't have to worry about how to deploy it :)
+
+Next up we're going to create some WeaponsControls, which will allow you to shoot the weapons, after which we will create the collider-money interactions, and that would be considered a true "Beta". After which we just need users to test stuff out while we add more weapons. Anyways, cheers to all invaders!
+
+...You know what? you can expect the WeaponsControls by tomorrow. And you know what? You can expect the colliders and money setup to work for the first weapon we release tomorrow too. Cheers :)
