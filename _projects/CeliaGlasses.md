@@ -17,5 +17,8 @@ What can we say? One of the best applications of 3D is not on our computer scree
 We hope this project introduces a new medium for our company in the 3D space, also marking our first foray into the hardware world. We hope this sets the tone for our company - we want to work towards humanity's future wherever that looks in the 3D space, and we think smartglasses are going to be the new smartphone.
 
 ### timeline
-
+- [ ] making something appear in the lenses
+- [ ] connecting lenses to separate server, for serving and logic
+- [ ] adding camera to the lenses and integrating with server
+- [ ] add visual logic to the server
 ### updates

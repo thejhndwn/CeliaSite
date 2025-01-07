@@ -28,9 +28,9 @@ We hope this project brings people to interact with our site and learn about who
 
 ### timeline
 - [ X ] 12/28 figure out ball and joint issue
-- [ ] 12/30 get physical avatar
-- [ ] 1/2 add first weapon model
-- [ ] 1/4 release beta
+- [ X ] 12/30 get physical avatar
+- [ X ] 1/2 add first weapon model
+- [ X ] 1/4 release beta
 - [ ] 1/5 add collisions and money system
 - [ ] 1/7 integrate money with tweakpane and collisions
 - [ ] 1/9 add more weapons
@@ -59,7 +59,7 @@ let paramsRightArm = RAPIER.JointData.spherical(
   let jointRightArm = world.createImpulseJoint(params, ball.rigid, rightArm.rigid, true);
 
 ```
-This is how we create our joints and the `Params` object should explain the joint placement relative to the entity body. However changing these values is having no effect on the joint placement. Also, switching the entity in the `createImpulseJoint` *does* have an effect on the joint - the declaration of entities for the joint is not commutative. ARGH! 
+This is how we create our joints and the `Params` object should explain the joint placement relative to the entity body. However changing these values is having no effect on the joint placement. Also, switching the entity in the `createImpulseJoint` *does* have an effect on the joint - the declaration of entities for the joint is not commutative. ARGH! [1/6. the issue....was that we were using the same params across the joints....]
 
 But we can fix the joint problem another time, right now we have a (disabled) avatar and we can move on to making the rest of program work. Particularly, we need to move onto weapons: making the weapons colliders, creating the collider-money connection, and creating controls for the weapons. If we can get those three mostly working, and add avatar skins functionality I'd be happy releasing to the public this Saturday. It seems tomorrow will largely be spent figuring out the "money-maker", collisions, for the game. If we can figure this out the end will be in sight.
 
@@ -72,3 +72,13 @@ Come see our "beta" at [buddy.lokispalace.com](buddy.lokispalace.com)!!! I'm hes
 Next up we're going to create some WeaponsControls, which will allow you to shoot the weapons, after which we will create the collider-money interactions, and that would be considered a true "Beta". After which we just need users to test stuff out while we add more weapons. Anyways, cheers to all invaders!
 
 ...You know what? you can expect the WeaponsControls by tomorrow. And you know what? You can expect the colliders and money setup to work for the first weapon we release tomorrow too. Cheers :)
+
+### 1/6 9:14PM
+
+Okay so the WeaponsControls did NOT happen. In fact as you can tell from the last update, nothing happened on the weekend. Yikes, that won't happen again, especially considering my blocker was so asenine.
+
+Today we connected the rigidBody to the existing missile mesh. We also decided to remove the planned complex WeaponsControls, replace it with automatic aiming, and instead focus on development of the firing and collisions systems. Also we introduced textures to the avatar. This should make the custom skins feature implementation quite trivial. 
+
+Ultimately the blocker was that I didn't want to do the work and I didn't want to work around the work and lost all that time that could've been spent working. If there's a takeaway from this, it's that I knew that it was a big task with lots of unknowns, and instead should concentrate on smaller unknowns, but on different fronts.
+
+OK if we can figure out firing and collisions tomorrow, then it's a matter of monkey grease to get the collisions-money system hooked up to the tweakpane. IF we can accomplish that tomorrow the schedule will be looking really good, and basically we'll have a working beta and just be working on adding stuff. I hope to come with good news. 
