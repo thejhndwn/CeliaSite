@@ -1,6 +1,6 @@
 import * as React from "react";
 import ListItem from "./PostListItem";
-import { Post, User } from "../interfaces";
+import { Post, User } from "../../interfaces";
 
 type Props = {
   items: Post[];

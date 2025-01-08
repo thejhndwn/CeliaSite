@@ -1,7 +1,7 @@
 import * as React from "react";
 import parse from "html-react-parser";
 
-import { Post } from "../interfaces";
+import { Post } from "../../interfaces";
 
 type PostListDetailProps = {
   item: Post;
