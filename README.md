@@ -22,7 +22,7 @@ npm run build // builds static files in /out
 ```
 
 # How CD works
-No CD, only plans
+Commits trigger a Github Action, which will run the deployment script. Github Actions are more for routing and secret keeping, the actual deployment logic is handled by the script
 
 ### plans
 1. I need to make a script that will automate copying the nginx files to the nginx directory, which I will then call in `npm run prod` or something
