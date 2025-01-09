@@ -24,7 +24,6 @@ jobs:
         run: |
           chmod +x deploy.sh  # make sure your deploy.sh is executable
           ./deploy.sh ${{ secrets.SERVER_HOST }} ${{ secrets.SERVER_USER }} ~/.ssh/id_rsa
-        
-      env:
-        SERVER_HOST: ${{ secrets.SERVER_HOST }}
-        SERVER_USER: ${{ secrets.SERVER_USER }}
+    env:
+      SERVER_HOST: ${{ secrets.SERVER_HOST }}
+      SERVER_USER: ${{ secrets.SERVER_USER }}
