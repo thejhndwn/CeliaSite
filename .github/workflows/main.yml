@@ -13,5 +13,3 @@ jobs:
       - name: Echo
         run: echo "Running Deployment Script"
 
-      - name: Run Deployment Script
-        run: bash ~/deploy.sh
