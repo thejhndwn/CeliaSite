@@ -2,7 +2,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 
 import { Post } from "../../interfaces";
 import Layout from "../../components/Layout";
-import ListDetail from "../../components/ListDetail";
+import ListDetail from "../../components/Blog/ListDetail";
 import { getPosts } from "../../lib/posts";
 
 type Props = {

@@ -3,9 +3,8 @@ import Link from "next/link";
 
 
 import { Post, User } from "../../interfaces";
-import { sampleUserData } from "../../utils/sample-data";
 import Layout from "../../components/Layout";
-import List from "../../components/PostList";
+import List from "../../components/Blog/PostList";
 import { getPosts } from "../../lib/posts";
 
 type Props = {

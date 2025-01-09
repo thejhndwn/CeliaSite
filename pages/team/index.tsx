@@ -1,12 +1,10 @@
 import { GetStaticProps } from "next";
-import Link from "next/link";
 
 
-import { Post, TeamMember, User } from "../../interfaces";
 import Layout from "../../components/Layout";
-import List from "../../components/PostList";
-import { getTeam } from "../../lib/teams";
 import Team from "../../components/Team/Team";
+import { TeamMember } from "../../interfaces";
+import { getTeam } from "../../lib/teams";
 
 type Props = {
   items: TeamMember[];
