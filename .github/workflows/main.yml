@@ -1,4 +1,4 @@
-name: Deploy Next.js Site
+name: Run Deployment Script
 
 on:
   push:
@@ -9,5 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Echo
+        run: echo "Running Deployment Script"
+        
       - name: Run Deployment Script
         run: bash deploy.sh
