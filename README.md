@@ -42,3 +42,5 @@ Commits trigger a Github Action, which will run the deployment script. Github Ac
 - add latest update view on /workboard landing page
 - add site directory tree
 
+- Separate the TODO section into todo.md and then make a page on the website that displays the todo.md
+
