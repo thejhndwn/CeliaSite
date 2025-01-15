@@ -8,7 +8,7 @@ type Props = {
 
 const Team = ({ items }: Props) => (
   <div>
-    <h1>THA MOTLEY CREW</h1>
+    <h1>THE MOTLEY CREW</h1>
     {items.map((item) => (
         <TeamCard data={item} />
     ))}
