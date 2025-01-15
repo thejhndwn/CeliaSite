@@ -85,3 +85,22 @@ OK if we can figure out firing and collisions tomorrow, then it's a matter of mo
 
 ### 1/9 5:22PM
 We have aiming and shooting, but having some trouble picking up the collisions. Not sure we're implementing it correctly from the documentation, but they are being consulted! This is definitely a blocker though. There are other cosmetic things to worry about as well. Once collisions are figured out we're going to complete the weapon cycle (once contact is made the weapon should reload) and also be able to integrate with the Tweakpane. The good news is that we've already seen that file upload plugin for Tweakpane AND looked at how to make unbounded ground (which we probably won't be using). There may be some missing features on Saturday, but I think we're going to have a good Beta release. 
+
+### 1/14 9:02PM
+OK I have been working dilligently. I'll be honest, the weekend was not that dilligent, some family matters (babysitting my niece) came up and I wasn't able to hit that 1/11 release that I wanted...but that's okay, because this thing plays WAY better than I thought.
+
+I'm going to be releasing the Beta today. There are 3 weapons right now and even a bug with the missile weapon model that I wasn't able to solve but idc the rest of the game is so good. 
+
+So, the future of this game. I mean this was only ever supposed to be an intro project and it's served its purpose. I DO intend to update the game however, at least in one iteration. I plan to:
+- fix the weapons orientation issue
+- add particle effects on impact
+- add until 10 or 20 weapons models. 
+- introduce some concept of weight to our physics (currently just velocity)
+
+But past that I don't want to commit much more. There are many more features that could be implemented:
+- camera tracking
+- different weapons styles (melee, static environment aka god powers)
+- adding specific effects to weapons like some that create fire or light
+- Twitter skin lookup
+
+But sadly I can't commit to those changes, unless I have spare time in the future. I can't even commit a timeframe to the next update. Sorry but we have to move on to generative modelling. But please, go try out the game. it's stored at the buddy prefix

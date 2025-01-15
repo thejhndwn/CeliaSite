@@ -5,7 +5,7 @@ details: Detailing work and research on our in-house 3D generator
 maintainer: Lil Jon
 contributors: [Lil Jon]
 status: incubating
-quote: "Three dimensional objects are the loudest because they're measured in VOLUME" 
+quote: "Three dimensional objects are the loudest because they're measured in Volume"
 
 ---
 

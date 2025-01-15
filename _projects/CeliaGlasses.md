@@ -4,7 +4,7 @@ title: In-House Augmented Reality Glasses
 details: Our first attempt at smart glasses by augmenting our in-house 3D generator
 maintainer: Lil Jon
 contributors: [Lil Jon]
-status: Releasing 2/1 
+status: incubating
 quote: "'I want to go higher' - Astronomer, probably"
 
 ---
@@ -21,4 +21,5 @@ We hope this project introduces a new medium for our company in the 3D space, al
 - [ ] connecting lenses to separate server, for serving and logic
 - [ ] adding camera to the lenses and integrating with server
 - [ ] add visual logic to the server
+
 ### updates
